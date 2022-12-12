@@ -10,10 +10,8 @@
 #SBATCH --error=logfiles/R-%x.%j.err
 
 
-fpath="/central/groups/RaraeAves/nathaniel/miniscope_data/sample_data_fr_jiang/chunk0/chunk0.avi"
-source /home/${USER}/.bashrc
+source ~/.bashrc
 source activate caiman
-cd ~/nnyema/miniscope_code/
 echo "attempting to filter data"
 finalfile=$(/bin/bash filter.sh "$fpath"| tail -n 1)
 echo "processing $finalfile"

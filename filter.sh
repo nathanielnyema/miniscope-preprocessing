@@ -9,7 +9,7 @@ then
   echo "$0: Too many arguments: $@"
   exit 1
 else
-  source /home/${USER}/.bashrc
+  source ~/.bashrc
   source activate caiman 
   newfold="$(dirname $1)/ds"
   newfile="$newfold/$(basename -s ".${1##*.}" $1)_ds.avi"
